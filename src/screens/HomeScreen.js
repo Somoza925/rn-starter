@@ -34,6 +34,11 @@ const HomeScreen = ({navigation}) => {
         onPress = {() => navigation.navigate('Calendar')}
       />
 
+      <Button
+        title = "Go to Square Demo"
+        onPress = {() => navigation.navigate('Square')}
+      />
+
 
     </View>
   )

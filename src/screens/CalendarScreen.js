@@ -1,6 +1,6 @@
 import React from 'react';
-import {View} from 'react-native';
-import { Calendar, CalendarList, Agenda } from 'react-native-calendars';
+import {View, Text} from 'react-native';
+import CalendarDetail from '../components/CalendarDetail';
 
 const CalendarScreen = () => {
     const vacation = {key:'vacation', color: 'red', selectedDotColor: 'blue'};
@@ -8,25 +8,7 @@ const CalendarScreen = () => {
     const workout = {key:'workout', color: 'green'};
 
     return (<View>
-            <Calendar 
-                markedDates={{
-                    '2019-10-25': {dots: [vacation, massage, workout], selected: true, selectedColor: 'red'},
-                    '2019-10-26': {dots: [massage, workout], disabled: true}
-                }}
-                onDayPress={(day) => {console.log('selected day', day)}}
-                markingType={'multi-dot'}
-
-                style={{
-                borderWidth: 1,
-                borderColor: 'gray',
-                height: 350
-                }}
-
-                theme = {{
-                    selectedDayBackgroundColor : 'orange'
-                }}
-
-            />
+            <CalendarDetail/>
     </View>);
 }
 
